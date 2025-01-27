@@ -212,7 +212,7 @@ if st.session_state.page == "New Chat":
     st.markdown("</div>", unsafe_allow_html=True)
 
     # Chat input box at the bottom
-    user_input = st.chat_input("Enter your question here:")
+    user_input = st.text_input("Enter your question here:")
 
     # When user submits a question
     if user_input:
