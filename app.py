@@ -226,10 +226,7 @@ if st.session_state.page == "New Chat":
         response = load_answer(user_input, conversation_history)
         st.session_state.sessionMessages.append({"role": "assistant", "content": response})
 
-        # Clear the input box after submitting
-        st.experimental_rerun()  # Rerun the script to update the UI immediately
-
-        # Scroll to the bottom of the chat container
+        # Scroll to the bottom of the chat container (this triggers the chat to update)
         st.markdown(
             """
             <script>
@@ -255,7 +252,7 @@ elif st.session_state.page == "Chat History":
         # Clear chat history button
         if st.button("Clear Chat History"):
             st.session_state.sessionMessages.clear()
-            st.experimental_rerun()  # Rerun to immediately reflect cleared history
+            st.session_state.page = "New Chat"  # Go back to the New Chat page
     else:
         st.write("No chat history available.")
 
