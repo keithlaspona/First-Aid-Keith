@@ -1,0 +1,7 @@
+streamlit==1.21.0
+langchain==0.2.16
+langchain-community
+langchain-google-genai==1.0.6
+huggingface_hub
+torch
+transformers
