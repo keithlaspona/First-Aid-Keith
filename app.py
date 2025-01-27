@@ -226,7 +226,10 @@ if st.session_state.page == "New Chat":
         response = load_answer(user_input, conversation_history)
         st.session_state.sessionMessages.append({"role": "assistant", "content": response})
 
-        # Scroll to the bottom of the chat container (this triggers the chat to update)
+        # Clear the input box after submitting
+        st.experimental_rerun()  # Rerun the script to update the UI immediately
+
+        # Scroll to the bottom of the chat container
         st.markdown(
             """
             <script>
@@ -252,7 +255,7 @@ elif st.session_state.page == "Chat History":
         # Clear chat history button
         if st.button("Clear Chat History"):
             st.session_state.sessionMessages.clear()
-            st.session_state.page = "New Chat"  # Go back to the New Chat page
+            st.experimental_rerun()  # Rerun to immediately reflect cleared history
     else:
         st.write("No chat history available.")
 
@@ -260,9 +263,9 @@ elif st.session_state.page == "About First Aid Keith":
     st.write(
         """
         <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-            <h2 style="font-family: 'Trebuchet MS', Helvetica, sans-serif; font-size: 32px; font-weight: bold; margin: 0;">About First Aid Keith</h2>
-            <p style="font-family: 'Gill Sans', Tahoma, Geneva, Verdana, sans-serif; font-size: 16px; margin-top: 10px;">
-                First Aid Keith is here to help you with all your first aid questions. Feel free to ask anything!
+            <h2 style="font-family: 'Trebuchet MS', Helvetica, sans-serif; font-size: 32px; font-weight: bold;">About First Aid Keith</h2>
+            <p style="font-size: 20px; color: #333;">
+                First Aid Keith is a conversational AI assistant designed to provide you with accurate, reliable, and immediate first aid advice in emergency situations. Whether you're at home, work, or on the go, First Aid Keith will help guide you through first aid procedures.
             </p>
         </div>
         """,
