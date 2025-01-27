@@ -226,19 +226,24 @@ if st.session_state.page == "New Chat":
         response = load_answer(user_input, conversation_history)
         st.session_state.sessionMessages.append({"role": "assistant", "content": response})
 
-        # Clear the input box after submitting
+        # Set the flag for rerun after updates
+        st.session_state.rerun_flag = True
+
+    # Trigger rerun only once
+    if 'rerun_flag' in st.session_state and st.session_state.rerun_flag:
+        del st.session_state.rerun_flag  # Reset the flag
         st.experimental_rerun()  # Rerun the script to update the UI immediately
 
-        # Scroll to the bottom of the chat container
-        st.markdown(
-            """
-            <script>
-            var chatContainer = document.getElementById('chat-container');
-            chatContainer.scrollTop = chatContainer.scrollHeight;
-            </script>
-            """,
-            unsafe_allow_html=True
-        )
+    # Scroll to the bottom of the chat container
+    st.markdown(
+        """
+        <script>
+        var chatContainer = document.getElementById('chat-container');
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+        </script>
+        """,
+        unsafe_allow_html=True
+    )
 
 elif st.session_state.page == "Chat History":
     st.write("### Chat History")
