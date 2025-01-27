@@ -255,7 +255,7 @@ elif st.session_state.page == "Chat History":
         # Clear chat history button
         if st.button("Clear Chat History"):
             st.session_state.sessionMessages.clear()
-                st.experimental_rerun()  # Rerun to immediately reflect cleared history
+            st.experimental_rerun()  # Rerun to immediately reflect cleared history
     else:
         st.write("No chat history available.")
 
