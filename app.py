@@ -81,7 +81,7 @@ st.markdown(
     padding: 20px;
 }
 .stSidebar {
-    background-color: #006666;
+    background-color: green;
     color: #333; 
     padding: 20px; 
 }
