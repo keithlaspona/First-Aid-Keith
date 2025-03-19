@@ -1,6 +1,6 @@
 # FirstAidKeith
 
-![FirstAidKeith Logo](FirstAidKeithLogo.png)
+<img src="FirstAidKeithLogo.png" alt="FirstAidKeith Logo" width="200"/>
 
 **FirstAidKeith** is a chatbot dedicated to providing first aid information and guidance. It leverages natural language processing to understand user queries and offers appropriate first aid advice.
 
