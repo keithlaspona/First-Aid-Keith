@@ -26,3 +26,21 @@ Follow these steps to set up and run FirstAidKeith on your local machine.
    ```bash
    git clone https://github.com/keithlaspona/First-Aid-Keith.git
    cd First-Aid-Keith
+
+2. **Create a Virtual Environment (recommended)**:
+
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+3. **Install Dependencies**:
+
+   ```bash
+   pip install -r requirements.txt
+
+### Running the Chatbot
+
+After installing the dependencies and setting up the environment variable:
+
+   ```bash
+   streamlit run app.py
