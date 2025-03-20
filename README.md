@@ -1,4 +1,4 @@
-# FirstAidKeith
+# First Aid Keith
 
 <img src="FirstAidKeithLogo.png" alt="FirstAidKeith Logo" width="200"/>
 
@@ -44,3 +44,8 @@ After installing the dependencies and setting up the environment variable:
 
    ```bash
    streamlit run app.py
+
+### Deployed Application
+   
+   You can access the deployed application at the following link: <br>
+   [First Aid Keith](https://kthdbln-first-aid-keith.hf.space/)
