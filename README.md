@@ -44,6 +44,7 @@ After installing the dependencies and setting up the environment variable:
 
    ```bash
    streamlit run app.py
+   ```
 
 
 ### Deployed Application
