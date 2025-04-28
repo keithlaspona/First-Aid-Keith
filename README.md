@@ -49,5 +49,5 @@ After installing the dependencies and setting up the environment variable:
 
 ### Deployed Application
 
-   You can access the deployed application at the following link: <br>
+   You can access the demo application at the following link: <br>
    [First Aid Keith](https://kthdbln-first-aid-keith.hf.space/)
